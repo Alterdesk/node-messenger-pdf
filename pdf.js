@@ -11,7 +11,7 @@ var tmpDir = Path.resolve(OS.tmpdir(), 'messenger-pdfs');
 var logger = new Log(process.env.NODE_MESSENGER_SDK_LOG_LEVEL || process.env.HUBOT_LOG_LEVEL || 'info');
 
 const options = {
-    port: process.env.NODE_MESSENGER_PDF_CHROME_PORT || 9222  // Chrome/Chromium port
+    port: process.env.NODE_MESSENGER_PDF_PORT || 9222  // Chrome/Chromium port
 };
 
 class Pdf {
