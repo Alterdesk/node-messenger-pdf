@@ -34,6 +34,14 @@ pdf.create(filename, html, (success, filePath) => {
 });
 ```
 
+## Color issue
+When the colors in the generated PDF files are off, use the following webkit argument in your body style
+```css
+body {
+    -webkit-print-color-adjust:exact;
+}
+```
+
 ## Environment variables
 Chrome/Chromium port to connect to
 * NODE_MESSENGER_PDF_PORT *(default: 9222)*
