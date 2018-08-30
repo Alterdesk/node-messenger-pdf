@@ -1,14 +1,14 @@
 {
   "name": "node-messenger-pdf",
   "version": "1.0.0",
-  "description": "Helper module to generate PDF files from HTML",
+  "description": "Helper module to generate PDF files from HTML with a headless Chrome/Chromium instance",
   "main": "pdf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.alterdesk.com:other/node-messenger-pdf.git"
+    "url": "https://github.com/Alterdesk/node-messenger-pdf"
   },
   "author": "Alterdesk",
   "license": "MIT",
