@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "html-pdf-chrome": "^0.5.0",
-    "uuid": "^3.2.1",
-    "log": "1.4.0"
+    "log": "1.4.0",
+    "parse5": "^5.1.0",
+    "uuid": "^3.2.1"
   }
 }
