@@ -1,6 +1,6 @@
 # node-messenger-pdf
 
-Helper module to generate PDF files from HTML with a headless Chrome/Chromium instance
+Helper module to generate PDF files from HTML with PhantomJS or a headless Chrome/Chromium instance
 
 ## Start headless Chrome/Chromium
 Start an instance of Chrome or Chromium that will receive the commands on the given port(default is 9222).
@@ -37,8 +37,12 @@ var filename = "hello_world.pdf";
 // HTML page as a string
 var html = "<p>Hello world!</p>";
 
+// Optional options object
+var options = {};
+options["header"] = "<h2>My header</h2>";
+
 // Create the pdf
-pdf.create(filename, html, (success, filePath) => {
+pdf.create(filename, html, options, (success, filePath) => {
     if(!success) {
         console.error("Unable to generate PDF");
         return;
@@ -55,7 +59,7 @@ body {
 }
 ```
 
-## Sandbox issues
+## Chrome/Chromium sandbox issues
 If you are unable to run the headless chrome/chromium instance without using --no-sandbox, you can try the following 
 configurations. The configurations were tested on CentOS successfully.
 
@@ -78,5 +82,8 @@ cat /proc/cmdline
 When the values are set the headless chrome/chromium instance should run in a sandbox.
 
 ## Environment variables
+Use PhantomJS or Chrome method
+* NODE_MESSENGER_PDF_METHOD *(phantom or chrome, default:phantom)*
+
 Chrome/Chromium port to connect to
 * NODE_MESSENGER_PDF_PORT *(default: 9222)*
