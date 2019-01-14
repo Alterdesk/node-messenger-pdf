@@ -2,7 +2,7 @@
   "name": "node-messenger-pdf",
   "version": "1.0.0",
   "description": "Helper module to generate PDF files from HTML with PhantomJS or a headless Chrome/Chromium instance",
-  "main": "pdf.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
