@@ -80,6 +80,9 @@ class Pdf {
         });
     }
 
+    /********************************************************************
+    * WARNING: DISABLE EMBEDDED JAVASCRIPT WHEN RUNNING CHROME INSTANCE *
+    ********************************************************************/
     chromeMethod(filePath, html, options, callback) {
         var chromeOptions = {};
         chromeOptions["port"] = port;
@@ -166,6 +169,9 @@ class Pdf {
             paperSize["format"] = format;
         }
         phantomOptions["paperSize"] = paperSize;
+        var settings = {};
+        settings["javascriptEnabled"] = false;
+        phantomOptions["settings"] = settings;
 
         phantom(phantomOptions, (err, pdf) => {
             if(err) {
