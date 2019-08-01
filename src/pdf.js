@@ -59,13 +59,15 @@ class Pdf {
 
             if(outputHtml === 1) {
                 this.writeToFile(Path.resolve(tmpDirPath, "page.html"), html);
-                var header = options["header"];
-                if(header && header.length > 0) {
-                    this.writeToFile(Path.resolve(tmpDirPath, "header.html"), header);
-                }
-                var footer = options["footer"];
-                if(footer && footer.length > 0) {
-                    this.writeToFile(Path.resolve(tmpDirPath, "footer.html"), footer);
+                if(options) {
+                    var header = options["header"];
+                    if(header && header.length > 0) {
+                        this.writeToFile(Path.resolve(tmpDirPath, "header.html"), header);
+                    }
+                    var footer = options["footer"];
+                    if(footer && footer.length > 0) {
+                        this.writeToFile(Path.resolve(tmpDirPath, "footer.html"), footer);
+                    }
                 }
             }
 
