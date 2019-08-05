@@ -13,10 +13,10 @@
   "author": "Alterdesk",
   "license": "MIT",
   "dependencies": {
-    "html-pdf-chrome": "^0.5.0",
+    "html-pdf-chrome": "^0.6.0",
     "log": "1.4.0",
     "parse5": "^5.1.0",
-    "phantom-html-to-pdf": "^0.5.6",
+    "phantom-html-to-pdf": "^0.6.0",
     "uuid": "^3.2.1"
   }
 }
