@@ -90,9 +90,11 @@ class Pdf {
         chromeOptions["port"] = port;
         var header;
         var footer;
+        var margin;
         if(options) {
             header = options["header"];
             footer = options["footer"];
+            margin = options["margin"];
         }
         if((header && header.length > 0) || (footer && footer.length > 0)) {
             var printOptions = {};
@@ -104,6 +106,24 @@ class Pdf {
             if(footer && footer.length > 0) {
                     Logger.debug("Pdf::create() Using footer");
                 printOptions["footerTemplate"] = footer;
+            }
+            if(margin) {
+                var marginLeft = margin["left"];
+                if(marginLeft) {
+                    printOptions["marginLeft"] = marginLeft;
+                }
+                var marginTop = margin["top"];
+                if(marginTop) {
+                    printOptions["marginTop"] = marginTop;
+                }
+                var marginRight = margin["right"];
+                if(marginRight) {
+                    printOptions["marginRight"] = marginRight;
+                }
+                var marginBottom = margin["bottom"];
+                if(marginBottom) {
+                    printOptions["marginBottom"] = marginBottom;
+                }
             }
             chromeOptions["printOptions"] = printOptions;
         }
